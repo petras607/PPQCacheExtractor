@@ -2,7 +2,9 @@
 The main purpose of this project is to reverse engineer downloaded/cache files of a PC version of a F2P game Puyo Puyo Quest!! avaliable on DMM platform in order to enable extracting and, in future, replacing the files.
 
 ## Prerequisites
-An environment that supports C++ compiling is required. For compiling on other platforms you may have to remove "pch.h" header from the project. For testing purposes you have to download the PC version of PPQ. The default installation location is:
+ * Microsoft Visual C++ 2017 Redistributable
+ * An environment that supports C++ for compiling (For compiling on other platforms than Windows you may have to remove "pch.h" header from the project)
+ * For testing purposes you have to download the PC version of PPQ. The default installation location is:
 ```
 C:\Users\[user-name]\PuyopuyoQuest
 ```
