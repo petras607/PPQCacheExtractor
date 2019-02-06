@@ -7,7 +7,6 @@
 #include <string>
 #include <fstream>
 #include <iterator>
-#include <direct.h>
 
 char* FileIntoByteVector(char* filename)
 {
@@ -34,7 +33,6 @@ int main(int argc, char *argv[])
 	//int cacheFileCount;
 	int fileCount;
 	char* cacheFileBytes;
-	//std::vector<char> cacheFileBytes;
 	std::vector<int> fileSize;
 	std::vector<std::string> fileName;
 	std::vector<unsigned char> curFileBytes;
@@ -66,7 +64,6 @@ int main(int argc, char *argv[])
 	// TODO: Find the purpose of these 8 bytes
 
 	std::string curFileName;
-	//char* path;
 	// Find the file names and put them in fileName vector
 	for (int i = 0; i < fileCount; i++)
 	{
@@ -117,7 +114,6 @@ int main(int argc, char *argv[])
 			out_file << curFileBytes[j];
 
 		out_file.close();
-		//std::ofstream(fileName[i], std::ios::out | std::ios::binary).write((char*)&curFileBytes, fileSize[i] * sizeof(char));
 	}
 	
 
