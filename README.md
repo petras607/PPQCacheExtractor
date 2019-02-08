@@ -21,6 +21,8 @@ Using the command line/terminal pass the name of the file you want to extract li
 ```
 .\PPQCacheExtractor.exe .\00000011
 ```
+Alternatively you can drag and drop the file you want to extract to the executable.
+
 The program will extract the files to the directory you were when you called it.
 
 ## Built With
