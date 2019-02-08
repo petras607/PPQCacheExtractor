@@ -17,13 +17,13 @@ The cache files are located in this folder:
 Check releases for newest versions of the project.
 
 ## Running
-Using the command line/terminal pass the name of the file you want to extract like this:
+Using the command line/terminal pass the name of the file(s) you want to extract like this:
 ```
 .\PPQCacheExtractor.exe .\00000011
 ```
-Alternatively you can drag and drop the file you want to extract to the executable.
+Alternatively you can drag and drop all the files you want to extract to the executable.
 
-The program will extract the files to the directory you were when you called it.
+The program will create folders for each cache file you input in the same directory as them.
 
 ## Built With
 Microsoft Visual Studio Community.
