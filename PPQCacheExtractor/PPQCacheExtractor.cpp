@@ -71,9 +71,10 @@ int extract(char cacheName[])
 	// Get first 2 bytes and store them in fileCount
 	fileCount = (int)((unsigned char)cacheFileBytes[0] | (unsigned char)cacheFileBytes[1] << 8);
 
-	// Starting from byte 4 fill the fileSize vector with file sizes read as 2 bytes divided by 2 empty bytes fileCount times.
+	// Starting from byte 4 fill the fileSize vector with file sizes read as 4 bytes fileCount times.
 	for (int i = 0; i < fileCount; i++)
-		fileSize.push_back((int)((unsigned char)cacheFileBytes[4 + i * 4] | (unsigned char)cacheFileBytes[4 + i * 4 + 1] << 8));
+		fileSize.push_back((int)((unsigned char)cacheFileBytes[4 + i * 4] | (unsigned char)cacheFileBytes[4 + i * 4 + 1] << 8
+			| (unsigned char)cacheFileBytes[4 + i * 4 + 2] << 16 | (unsigned char)cacheFileBytes[4 + i * 4 + 3] << 24));
 
 
 	// There are 8 bytes for each file that I don't know the purpose for yet. We skip them since they're not needed for extraction
