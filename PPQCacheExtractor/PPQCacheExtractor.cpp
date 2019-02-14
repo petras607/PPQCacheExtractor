@@ -140,7 +140,7 @@ int extract(char cacheName[])
 		path = baseDir + "/" + fileName[i];
 
 		// Create new file with name fileName that consists of every copied byte stored in curFileBytes. Save the file.
-		out_file.open(path, std::ios::out | std::ios::binary);
+		out_file.open(path, std::ios::out | std::ios::binary | std::ios::trunc);
 		for (int j = 0; j < fileSize[i]; j++)
 			out_file << curFileBytes[j];
 
