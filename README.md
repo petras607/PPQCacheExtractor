@@ -1,34 +1,31 @@
 # PPQCacheExtractor
-The main purpose of this project is to reverse engineer downloaded/cache files of a PC version of a F2P game Puyo Puyo Quest!! avaliable on DMM platform in order to enable extracting and, in future, replacing the files.
+The main purpose of this project is to reverse engineer downloaded/cache files of a F2P game Puyo Puyo Quest!! in order to enable extracting and experimental replacing the files. While originally developed based off the now defunct PC version formerly available on DMM, it will also work with files from the Android version.
 
 ## Prerequisites
- * Microsoft Visual C++ 2017 Redistributable
- * An environment that supports C++ for compiling (For compiling on other platforms than Windows you may have to remove "pch.h" header from the project)
- * For testing purposes you have to download the PC version of PPQ. The default installation location is:
-```
-C:\Users\[user-name]\PuyopuyoQuest
-```
-The cache files are located in this folder:
-```
-[root-PPQ-folder]\caches\downloads
-```
+ * Microsoft Visual C++ 2019 Redistributable
+ * Windows SDK 10.0
+ * Rooted phone with Puyo Puyo Quest!! installed (to access files)
 
 ## Downloading the prebuilt file
 Check releases for newest versions of the project.
 
 ## Running
-Using the command line/terminal pass the name of the file(s) you want to extract like this:
+Using the command line pass the name of the file(s) you want to extract like this, or drag and drop into the executable:
 ```
 .\PPQCacheExtractor.exe .\00000011
 ```
-Alternatively you can drag and drop all the files you want to extract to the executable.
+This will create folders with _out suffix for each cache file you input.
 
-The program will create folders for each cache file you input in the same directory as them.
+For extracting use the command line to pass the file you want to rebuild and folder containing modified files like this:
+```
+.\PPQCacheExtractor.exe -r .\00000011 .\folder_with_new_files
+```
+This will create a new file with _new suffix. Keep in mind using the new file will most likely crash the game when it tries loading in modified files.
 
 ## Built With
-Microsoft Visual Studio Community.
+Microsoft Visual Studio Community 2019.
 
 ## Contributing
-In case you want to help first write the code for features listed in TODO. Don't heavily change the structure of the program without providing a good reason.
+There are two things you can do to help the project. Figure out why the game crashes when using modified files and what the final 4 bytes really mean.
 
 If you have an idea for a feature, please discuss!
